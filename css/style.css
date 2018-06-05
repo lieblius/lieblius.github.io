@@ -24,6 +24,7 @@ a{
 header{
 	border-bottom: 3px solid;
 	text-align: center;
+	margin-left: -10px;
 }
 
 header h1{
@@ -37,6 +38,14 @@ header h1{
    	filter: invert(1);
 }
 
+#email{
+	height: 50px;
+	width: 50px;
+	-webkit-filter: invert(1);
+   	filter: invert(1);
+   	margin-left: 10px;
+}
+
 #particles-js{
 	height: 100%;
 	opacity: .8;
@@ -47,10 +56,11 @@ header h1{
 
 .flayer {
   position:absolute;
+  display: inline-block;
   top: 50%;
   left: 50%;
-  margin-left: -25px;
-  margin-top: -25px;
+  margin-left: -55px;
+  margin-top: -55px;
   color: #fff;
   z-index: 999;
 }
