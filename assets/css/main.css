@@ -319,10 +319,11 @@ a:hover {
 #main {
 	height: 100%;
 	left: 0;
-	position: fixed;
+	/*position: fixed;*/
 	text-align: center;
 	top: 0;
 	width: 100%;
+	pointer-events:none;
 }
 
 #main:before {
@@ -332,6 +333,13 @@ a:hover {
 	margin-right: 0;
 	vertical-align: middle;
 	width: 1px;
+}
+
+/* Links */
+
+#links{
+	pointer-events: auto;
+	display: inline;
 }
 
 /* Header */
