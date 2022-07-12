@@ -12,7 +12,7 @@ a:hover { text-decoration: none; }
 a:active { text-decoration: none; }
 
 .leaderboard {
-  max-width: 420px;
+  max-width: 380px;
   width: 100%;
   border-radius: 12px;
 }
