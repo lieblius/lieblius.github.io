@@ -1,6 +1,6 @@
 // Battery
 
-ver btchrg = "";
+var btchrg = "";
 
 let batteryIsCharging = false;
 
