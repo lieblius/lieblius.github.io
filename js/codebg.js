@@ -22,7 +22,7 @@ $.getJSON('https://ipgeolocation.abstractapi.com/v1/?api_key=' + atob(slug), fun
 });
 
 var onvpn = "not on vpn";
-if(loc_data.security)
+if(loc_data.security.is_vpn)
     onvpn = "using vpn";
 
 
@@ -45,7 +45,7 @@ window.addEventListener('resize', function(){
     }
 })
 
-var characters = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', btchrg, loc_data.ip_address, loc_data.city, loc_data.connection.isp_name, loc_data.continent, 'longitude ${loc_data.longitude}', 'latitude ${loc_data.latitude}', loc_data.region, onvpn, 'print', 'return', 'string', 'int', 'void', 'json', 'let', 'push', 'class', 'int', 'return', 'string', 'cout']
+var characters = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', btchrg, loc_data.ip_address, loc_data.city, loc_data.connection.isp_name, loc_data.continent, 'longitude ${loc_data.longitude}', 'latitude ${loc_data.latitude}', loc_data.region, onvpn, '${screen.width} x ${screen.height}']
 
 function Circle(x){
     this.x = x;
