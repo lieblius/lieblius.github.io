@@ -21,6 +21,8 @@ $.getJSON('https://ipgeolocation.abstractapi.com/v1/?api_key=' + atob(slug), fun
   loc_data = data;
 });
 
+setTimeout( function(){
+
 var onvpn = "not on vpn";
 if(loc_data.security.is_vpn)
     onvpn = "using vpn";
@@ -116,4 +118,5 @@ function animate(){
 }
 
 animate();
-
+  
+}, 1000);
