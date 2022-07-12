@@ -8,3 +8,14 @@ body {
     background-color: black;
     overflow-x: hidden;
 }
+
+canvas {
+  animation: fadeBackground 2s;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+
+@keyframes fadeBackground {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
