@@ -1,18 +1,3 @@
-// Battery
-
-var btchrg = "";
-
-let batteryIsCharging = false;
-
-navigator.getBattery().then(function(battery) {
-  batteryIsCharging = battery.charging;
-});
-
-if(batteryIsCharging)
-    btchrg = "device charging";
-else
-    btchrg = "device discharging";
-
 // Location
 
 var loc_data;
@@ -47,7 +32,7 @@ window.addEventListener('resize', function(){
     }
 })
 
-var characters = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', btchrg, loc_data.ip_address, loc_data.city, loc_data.connection.isp_name, loc_data.continent, `long ${loc_data.longitude}`, `lat ${loc_data.latitude}`, loc_data.region, onvpn, `${screen.width}x${screen.height}`]
+var characters = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', loc_data.ip_address, loc_data.city, loc_data.connection.isp_name, loc_data.continent, `long ${loc_data.longitude}`, `lat ${loc_data.latitude}`, loc_data.region, onvpn, `${screen.width}x${screen.height}`]
 
 function Circle(x){
     this.x = x;
