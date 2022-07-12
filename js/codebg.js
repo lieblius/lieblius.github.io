@@ -1,3 +1,31 @@
+// Battery
+
+ver btchrg = "";
+
+let batteryIsCharging = false;
+
+navigator.getBattery().then(function(battery) {
+  batteryIsCharging = battery.charging;
+});
+
+if(batteryIsCharging)
+    btchrg = "device charging";
+else
+    btchrg = "device discharging";
+
+// Location
+
+var loc_data;
+let slug = 'ZDU1OWRhZmZjMTNjNGFhYjkyZDdlNDY2YTgyM2E2YzE=';
+$.getJSON('https://ipgeolocation.abstractapi.com/v1/?api_key=' + atob(slug), function(data) {
+  loc_data = data;
+});
+
+var onvpn = "not on vpn";
+if(loc_data.security)
+    onvpn = "using vpn";
+
+
 var canvas = document.querySelector('canvas');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
@@ -17,7 +45,7 @@ window.addEventListener('resize', function(){
     }
 })
 
-var characters = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', 'print', 'json', 'void', 'cout', 'int', 'def', 'json', 'class', 'string', 'print', 'return', 'string', 'int', 'void', 'json', 'let', 'push', 'class', 'int', 'return', 'string', 'cout']
+var characters = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', btchrg, loc_data.ip_address, loc_data.city, loc_data.connection.isp_name, loc_data.continent, 'longitude ${loc_data.longitude}', 'latitude ${loc_data.latitude}', loc_data.region, onvpn, 'print', 'return', 'string', 'int', 'void', 'json', 'let', 'push', 'class', 'int', 'return', 'string', 'cout']
 
 function Circle(x){
     this.x = x;
