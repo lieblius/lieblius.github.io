@@ -2,12 +2,9 @@
 
 a:link { text-decoration: none; }
 
-
 a:visited { text-decoration: none; }
 
-
 a:hover { text-decoration: none; }
-
 
 a:active { text-decoration: none; }
 
@@ -16,6 +13,7 @@ a:active { text-decoration: none; }
   width: 100%;
   border-radius: 12px;
 }
+
 .leaderboard__profiles {
   border-radius: 12px;
   padding: 15px 15px 15px;
@@ -23,6 +21,7 @@ a:active { text-decoration: none; }
   row-gap: 15px;
   background-color:rgba(0,0,0,0);
 }
+
 .leaderboard__profile {
   display: grid;
   grid-template-columns: 1fr 1fr;;
@@ -39,6 +38,7 @@ a:active { text-decoration: none; }
   transform: scale(1.05);
   box-shadow: 0 0 7px 3px rgba(0, 255, 0, .5);
 }
+
 .leaderboard__name {
   color: green;
   font-weight: 600;
@@ -46,12 +46,14 @@ a:active { text-decoration: none; }
   letter-spacing: 0.64px;
   margin-left: 12px;
 }
+
 .leaderboard__value {
   color: green;
   font-weight: 700;
   font-size: 20px;
   text-align: right;
 }
+
 .leaderboard__value > span {
   opacity: 0.8;
   font-weight: 600;
@@ -59,6 +61,7 @@ a:active { text-decoration: none; }
   margin-left: 3px;
   margin-right: 12px;;
 }
+
 #list {
   margin: 0;
   display: grid;
@@ -66,4 +69,3 @@ a:active { text-decoration: none; }
   place-items: center;
   font-family: 'Source Sans Pro', sans-serif;
 }
-
