@@ -1,8 +1,0 @@
-Package: com.lieblius.respring10
-Name: Respring10
-Version: 1.0
-Architecture: iphoneos-arm
-Description: Respring application for iOS 10
-Maintainer: lieblius
-Author: lieblius
-Section: Utilities
