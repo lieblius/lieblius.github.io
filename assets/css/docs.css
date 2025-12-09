@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900");
+
+a:link { text-decoration: none; }
+
+a:visited { text-decoration: none; }
+
+a:hover { text-decoration: none; }
+
+a:active { text-decoration: none; }
+
+.leaderboard {
+  max-width: 380px;
+  width: 100%;
+  border-radius: 12px;
+}
+
+.leaderboard__profiles {
+  border-radius: 12px;
+  padding: 15px 15px 15px;
+  display: grid;
+  row-gap: 15px;
+  background-color:rgba(0,0,0,0);
+}
+
+.leaderboard__profile {
+  display: grid;
+  grid-template-columns: 1fr 1fr;;
+  align-items: center;
+  padding: 10px 10px 10px 10px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 7px 0px rgba(0, 255, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.25s cubic-bezier(0.7, 0.98, 0.86, 0.98), box-shadow 0.25s cubic-bezier(0.7, 0.98, 0.86, 0.98);
+}
+
+.leaderboard__profile:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 7px 3px rgba(0, 255, 0, .5);
+}
+
+.leaderboard__name {
+  color: green;
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 0.64px;
+  margin-left: 12px;
+}
+
+.leaderboard__value {
+  color: green;
+  font-weight: 700;
+  font-size: 20px;
+  text-align: right;
+}
+
+.leaderboard__value > span {
+  opacity: 0.8;
+  font-weight: 600;
+  font-size: 13px;
+  margin-left: 3px;
+  margin-right: 12px;;
+}
+
+#list {
+  margin: 0;
+  display: grid;
+  height: 100vh;
+  place-items: center;
+  font-family: 'Source Sans Pro', sans-serif;
+}
